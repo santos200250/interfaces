@@ -1,0 +1,38 @@
+<div class="container">
+    <h2>📚 Listado de Cursos</h2>
+    <button class="btn-crear">➕ Nuevo Curso</button>
+
+    <table class="tabla-cursos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Horas</th>
+                <th>Estado (Pipe Propio)</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let curso of cursos">
+                <td>{{ curso.id }}</td>
+                <td>{{ curso.nombre }}</td>
+                <td>{{ curso.horas }} Hrs</td>
+
+                <td>
+                    <span [class.activo]="curso.activo" [class.inactivo]="!curso.activo">
+                        {{ curso.activo | estadotexto }}
+                    </span>
+                </td>
+
+                <td>
+                    <button class="btn-editar">✏️</button>
+                    <button (click)="eliminarCurso(curso.id)" class="btn-eliminar">🗑️</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="cursos.length === 0" class="no-data">
+        No hay cursos disponibles.
+    </div>
+</div>

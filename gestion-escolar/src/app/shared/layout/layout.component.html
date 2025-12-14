@@ -1,0 +1,15 @@
+<div class="layout-wrapper">
+    <nav class="sidebar">
+        <div class="brand">🏫 Admin</div>
+        <ul>
+            <li><a routerLink="/dashboard" routerLinkActive="active">📊 Dashboard</a></li>
+            <li><a routerLink="/cursos" routerLinkActive="active">📚 Cursos</a></li>
+            <li *ngIf="isAdmin"><a routerLink="/usuarios" routerLinkActive="active">👥 Usuarios</a></li>
+            <li><a (click)="logout()" class="logout">🚪 Salir</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <router-outlet></router-outlet>
+    </main>
+</div>
