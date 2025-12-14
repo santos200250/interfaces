@@ -1,0 +1,38 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "email": "admin@idat.edu.pe",
+            "password": "admin",
+            "role": "admin",
+            "name": "Administrador General"
+        },
+        {
+            "id": 2,
+            "email": "examen@idat.edu.pe",
+            "password": "exito",
+            "role": "student",
+            "name": "Kevin Alumno"
+        }
+    ],
+    "cursos": [
+        {
+            "id": 1,
+            "nombre": "Desarrollo de Interfaces",
+            "horas": 4,
+            "activo": true
+        },
+        {
+            "id": 2,
+            "nombre": "Spring Boot Avanzado",
+            "horas": 5,
+            "activo": false
+        },
+        {
+            "id": 3,
+            "nombre": "Gestión de Proyectos Ágiles",
+            "horas": 3,
+            "activo": true
+        }
+    ]
+}
